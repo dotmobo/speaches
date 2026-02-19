@@ -129,7 +129,7 @@ def transcribe_file(
     language: Annotated[str | None, Form()] = None,
     prompt: Annotated[str | None, Form()] = None,
     response_format: Annotated[ResponseFormat, Form()] = DEFAULT_RESPONSE_FORMAT,
-    temperature: Annotated[float | list[float], Form()] = [0.0, 0.2, 0.4, 0.6, 0.8, 1.0],
+    temperature: Annotated[float | list[float], Form()] = 0.0,
     timestamp_granularities: Annotated[
         TimestampGranularities,
         # WARN: `alias` doesn't actually work.
